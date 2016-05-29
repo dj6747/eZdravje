@@ -7,6 +7,9 @@
   <link href="knjiznice/css/stil.css" rel="stylesheet">
   <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
   <script src="knjiznice/js/bootstrap.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+  <script src="knjiznice/js/podatki.js"></script>
   <script src="knjiznice/js/koda.js"></script>
 </head>
 <body>
@@ -20,14 +23,14 @@
           <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
         <!-- ZAČETEK: Ime vaše aplikacije -->
-        <a class="navbar-brand" href="index.html">{ime vaše aplikacije}</a>
+        <a class="navbar-brand" href="index.html">MojeZdravje</a>
         <!-- KONEC: Ime vaše aplikacije -->
       </div>
       <div class="collapse navbar-collapse" id="menujska-vrstica">
         <ul class="nav navbar-nav">
           <li><a href="opis.html">Opis ideje</a></li>
           <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
-          <li><a href="#">Generiranje podatkov</a></li>
+          <li><a href="javascript:generiraj()">Generiranje podatkov</a></li>
         </ul>
       </div>
     </div>
@@ -39,7 +42,7 @@
       <div class="container">
         <p>Pozdravljeni, izberite pacienta.</p>
         <div class="buttonBox">
-          <form class="form-horizontal">
+          <div class="form-horizontal">
             <div class="form-group">
               <label for="patientSelectBtn" class="col-sm-2 control-label">Izberite pacienta</label>
               <div class="col-sm-10" id="selDiv">
@@ -52,12 +55,13 @@
                 <input type="text" class="form-control" id="ehrIdInput" placeholder="EHR ID">
               </div>
             </div>
+            <div id="status"></div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <button onclick="prijava()" class="btn btn-success">Prijava</button>
               </div>
             </div>
-          </form>
+          </div>
         </div>
         
       </div>
@@ -67,7 +71,42 @@
     
     
     <div id="secondPage">
-      
+      <h4 class="name">
+        
+      </h4>
+      <div class="row">
+        <div class="mainDiv col-md-9">
+          <div class="firstDiv">
+              <div class="col-md-4">
+                <p class="lead">Višina</p> 
+                <span id="visina"></span>
+              </div>
+              <div class="col-md-4">
+                <p class="lead">Teža</p>
+                <span id="teza"></span>
+              </div>
+              <div class="col-md-4 last">
+                <p class="lead">ITM</p> 
+                <span id="itm"></span>
+              </div>
+          </div>
+            <br>
+            <div id="graphDiv">
+                <select id="zamenjajV"  onchange="zamenjajVsebino(this.value)">
+                  <option value="graph">Graf</option>
+                  <option value="data">Podatki</option>
+                </select>
+                
+                <div id="contentDiv">
+                  
+                </div>
+            </div>
+        </div>
+        
+        <div class="rightSide col-md-3">
+          
+        </div>
+      </div>
     </div>
     
   <!-- KONEC: Vsebina aplikacije -->
