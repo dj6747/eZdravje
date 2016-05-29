@@ -44,9 +44,9 @@
             <h3 class="panel-title">Opis ideje, ki jo aplikacija podpira</h3>
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Opis ideje, ki jo aplikacija podpira -->
-            <p><strong>TO-DO</strong>: Na tem mestu je potrebno dodati <strong>osnovni opis ideje rešitve</strong> (kakšen je osnovni SCENARIJ UPORABE, KDO je ciljna publika, za kakšen NAMEN se aplikacija uporablja).</p><p class="text-muted">Opis naj ne bo daljši od 200 besed.</p>
-            <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
+            Aplikacija MojeZdravje je namenjena pacientom, ki želijo imeti enostaven pregled nad svojim zdravjem.  Aplikacija omogoča pregled osnovnih vitalnih znakov, kot so telesna temperatura, krvni tlak, teža, višina ter nasičenost krvi s kisikom. V končni verziji aplikacije  bi uporabnik vsak dan vnašal te podatke, trenutno pa je aplikacija realizirana do te mere, da omogoča enostaven pregled nad osnovnimi vitalnimi znaki. 
+Ciljna publika aplikacije so vsi ljudje, ki skrbijo za svoje zdravje, in bi želeli imeti enostaven pregled nad njim. 
+V aplikacijo se trenutno lahko vpišemo preko ehr idja. Po prijavi se nam odpre nadzorna plošča, na kateri imamo pregled nad telesno težo, višino. Aplikacija nam poleg tega izračuna tudi ITM, preko katerega se lahko razvrstimo v eno izmed kategorij (v tabeli na desni strani). Spodaj si lahko ogledamo še graf, ki nam trenutno kaže pritisk za 4 dni meritev,  lahko pa zgoraj desno na površini grafa spremenimo tudi pogled, in pogledamo še ostale podatke.
           </div>
         </div>
         <div class="panel panel-default">
@@ -54,9 +54,7 @@
             <h3 class="panel-title">Uporabljeni zunanji viri podatkov</h3>
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
-            <p><strong>TO-DO</strong>: Na tem mestu je navesti zunanji vir podatkov (URL naslov), na kakšen način ste ga uporabili (neposredni API klic, uvožena statična datoteka ipd.) in kaj je bil namen uporabe (kako se vključuje v osnovno idejo aplikacije).</p>
-            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+            V aplikacijo sem vključil tabelo ITM iz strani https://sl.wikipedia.org/wiki/Debelost. Ta tabela dopolnjuje funkcionalnost ITM kalkulatorja. Tabelo sem iz strani pridobil tako, da sem naredil API klic na wikipedio in s Jquery funkcijami naredil Jquery model, preko katerega sem ven dobil tabelo. Tabelo sem nato vstavil v spletno stran, in ji dodal nekaj “Bootstrap classov” za lepši izgled. Koda se izvede ob vsaki osvežitvi strani, zato so podatki vedno ažurni.
           </div>
         </div>
         <div class="panel panel-default">
