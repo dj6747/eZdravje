@@ -474,23 +474,6 @@ function preberiMeritveVitalnihZnakov(type, callback) {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 		        callback(res);
-		    	/*if (type == "weight" && res.length > 0) {
-		    	    
-		    	} else if (type == "body_temperature" && res.length > 0) {
-		    	    
-		    	} else if (type == "height" && res.length > 0) {
-		    	    
-		    	}  else if (type == "blood_pressure" && res.length > 0) {
-		    	    
-		    	}  else if (type == "pulse" && res.length > 0) {
-		    	    
-		    	}  else if (type == "spO2" && res.length > 0) {
-		    	    
-		    	}   else if (type == "weight" && res.length > 0) {
-		    	    
-		    	} else {
-		    	    callback("Ni podatkov.");
-		    	}*/
 		    },
 		    error: function() {
 		    	callback("Ni podatkov.");
